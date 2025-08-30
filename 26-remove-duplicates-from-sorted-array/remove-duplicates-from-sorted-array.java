@@ -4,10 +4,10 @@ public class Solution {
             return 0;
         }
 
-        int k = 1; // Initialize the count of unique elements to 1
-        for (int i = 1; i < nums.length; i++) {
+        int k = 1;
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] != nums[k - 1]) {
-                nums[k] = nums[i]; // Overwrite the next unique element
+                nums[k] = nums[i];
                 k++;
             }
         }
