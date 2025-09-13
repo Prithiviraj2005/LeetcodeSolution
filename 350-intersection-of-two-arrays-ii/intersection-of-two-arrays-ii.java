@@ -3,6 +3,7 @@ class Solution {
         int l1 = nums1.length;
         int l2 = nums2.length;
         int i = 0, j = 0, k = 0;
+        int[] ans =new int[l1*l2];
         Arrays.sort(nums1);
         Arrays.sort(nums2);
         while( i < l1 && j < l2)
@@ -17,10 +18,10 @@ class Solution {
             }
             else
             {
-                nums1[k++] = nums1[i++];
+                ans[k++] = nums1[i++];
                 j++;
             }
         }
-        return Arrays.copyOfRange(nums1,0,k);
+        return Arrays.copyOfRange(ans,0,k);
     }
 }
