@@ -17,8 +17,6 @@ class Solution {
                 k++;
             }
         }
-        
-        // Add any remaining numbers after the loop
         while (k <= nums.length) {
             ans.add(k);
             k++;
