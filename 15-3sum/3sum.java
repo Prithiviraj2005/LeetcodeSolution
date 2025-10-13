@@ -3,10 +3,10 @@ class Solution {
         List<List<Integer>> res = new ArrayList<>();
         if (nums.length < 3) return res;
 
-        Arrays.sort(nums);// Sort array
+        Arrays.sort(nums);
 
         for (int i = 0; i < nums.length - 2; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) continue; // skip duplicates
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
             if (nums[i] > 0) break; 
 
             int left = i + 1, right = nums.length - 1;
@@ -19,7 +19,6 @@ class Solution {
                     left++;
                     right--;
 
-                    // skip duplicates
                     while (left < right && nums[left] == nums[left - 1]) left++;
                     while (left < right && nums[right] == nums[right + 1]) right--;
                 } else if (sum < target) {
