@@ -7,16 +7,12 @@ class Solution {
         for (int num : nums) {
             set.add(num);
             if (set.size() > 3) {
-                set.pollFirst(); // safely removes and returns smallest (no exception)
+                set.pollFirst();
             }
         }
-
-        // If less than 3 distinct numbers, return max
         if (set.size() < 3) {
             return set.last();
         }
-
-        // Else return the third maximum
         return set.first();
     }
 }
