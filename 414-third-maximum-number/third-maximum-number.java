@@ -13,6 +13,8 @@ class Solution {
         if (set.size() < 3) {
             return set.last();
         }
+
+
         return set.first();
     }
 }
