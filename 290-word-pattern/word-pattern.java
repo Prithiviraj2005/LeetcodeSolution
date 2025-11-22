@@ -1,7 +1,7 @@
 class Solution {
     public boolean wordPattern(String pattern, String s) {
-        HashMap<Character, String> char_map=new HashMap<Character, String>();
-        HashMap<String, Character> word_map=new HashMap<String, Character>();
+        Map<Character, String> char_map=new HashMap<Character, String>();
+        Map<String, Character> word_map=new HashMap<String, Character>();
         String words[]=s.split(" ");
         if(pattern.length()!=words.length){
             return false;
